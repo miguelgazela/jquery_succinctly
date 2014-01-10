@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <style>
+            .last {
+                background: #900;
+            }
+        </style>
+        <ul id="list">
+            <li></li>
+            <li>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+            <li></li>
+            <li></li>
+        </ul>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($) {
+                $('#list') // original wrapper set
+                    .find('> li') // destructive method
+                        .filter(':last') // destructive method
+                            .addClass('last')
+                        .end() // end filter(:last)
+                        .find('ul') // destructive method
+                            .css('background', "#ccc")
+                            .find('li:last') //destructive method
+                                .addClass('last')
+                            .end() // end find(li:last)
+                        .end() // end find(ul)
+                    .end() // end find(> li)
+                    .find('li') // back to the original wrapper set
+                        .append("I am an &lt;li&gt;");
+            })(jQuery)
+        </script>
+    </body>
+</html>

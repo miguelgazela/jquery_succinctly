@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            jQuery(function($) {
+                $('<p></p>').appendTo('body');
+                $(document.createElement('a')).text('jQuery').appendTo('p');
+                $('a:first').attr('href', 'http://www.jquery.com');
+                $(document.anchors[0]).attr('jQuery');
+            });
+        </script>
+    </body>
+</html>
