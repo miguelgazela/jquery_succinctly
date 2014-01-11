@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <a href="http://www.jquery.com" title="anchor1">jQuery</a>
+        <a href="http://www.jquery.com" title="anchor2">jQuery</a>
+        <a href="http://www.jquery.com" title="anchor3">jQuery</a>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                var arrayOfAnchors = $('a').get();
+                alert(arrayOfAnchors[2].title);
+            })(jQuery)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div>
+            <div>
+                <div id="context"><a href="#">jQuery</a></div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                alert($('a').context);
+                alert($('a', $('#context')[0]).context);
+            })(jQuery)
+        </script>
+    </body>
+</html>

@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <body>
-        
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h3>h3</h3>
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script>
-            
+            (function($){
+                alert($('h3, h2, h1').get(0).nodeName);
+            })(jQuery)
         </script>
     </body>
 </html>
