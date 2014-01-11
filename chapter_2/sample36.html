@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <p><strong>first</strong></p>
+        <p>middle</p>
+        <p><strong>last</strong></p>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                alert($('p').filter(':not(:first):not(:last)').text());
+            })(jQuery)
+        </script>
+    </body>
+</html>

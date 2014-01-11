@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div id="parent2">
+            <div id="parent1">
+                <div id="parent0">
+                    <div id="start"></div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                alert($('#start').parent().attr('id'));
+                alert($('#start').parents('#parent0').attr('id'));
+                alert($('#start').parents()[0].id);
+                alert($('#start').closest('#parent0').attr('id'));
+
+                alert($('#start').parent().parent().attr('id'));
+                alert($('#start').parents('#parent1').attr('id'));
+                alert($('#start').parents()[1].id);
+                alert($('#start').closest('#parent1').attr('id'));
+
+                alert($('#start').parent().parent().parent().attr('id'));
+                alert($('#start').parents('#parent2').attr('id'));
+                alert($('#start').parents()[2].id);
+                alert($('#start').closest('#parent2').attr('id'));
+            })(jQuery)
+        </script>
+    </body>
+</html>

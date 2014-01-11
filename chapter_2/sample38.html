@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <img src="" alt="">
+        <img src="" alt="">
+        <p>
+            <img src="" alt="">
+        </p>
+        <img src="" alt="">
+        <p>
+            <img src="" alt="">
+        </p>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                $('img')
+                    .attr('src', 'http://static.jquery.com/files/rocker/images/logo_jquery_215x53.gif')
+                    .filter(function(){
+                        return !$(this).parent('p').length == 1
+                    }).wrap('<p></p>');
+            })(jQuery)
+        </script>
+    </body>
+</html>
