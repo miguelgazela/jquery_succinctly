@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div style="position: absolute;">absolute</div>
+        <span style="position: absolute;">absolute</span>
+        <div>static</div>
+        <div style="position: absolute;">absolute</div>
+        <div>static</div>
+        <span style="position: absolute;">absolute</span>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                $.expr[':'].positionAbsolute = function(element) {
+                    return $(element).css('position') === 'absolute';
+                };
+                alert($(':positionAbsolute').length); // alerts 4
+                alert($('div:positionAbsolute').length); // alerts 2
+                
+                // or
+
+                alert($('div').filter(function() {
+                    return $(this).css('position') === 'absolute';
+                }).length);
+            })(jQuery)
+        </script>
+    </body>
+</html>

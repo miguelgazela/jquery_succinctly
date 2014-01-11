@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                alert($('li:nth-child(2)').text()); // 22
+                alert($('li:nth-child(odd)').text()); // 135135
+                alert($('li:nth-child(even)').text()); // 2424
+                alert($('li:nth-child(2n)').text()); // 2424
+            })(jQuery)
+        </script>
+    </body>
+</html>

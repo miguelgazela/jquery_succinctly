@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div>
+            <p><strong><span>text</span></strong></p>
+            <p><strong><span>text</span></strong></p>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                alert($('div').children().length);
+                alert($('>*', 'div').length);
+                alert($('div').find('>*').length);
+
+                alert($('div').find('*').length);
+                alert($('*', 'div').length);
+            })(jQuery)
+        </script>
+    </body>
+</html>

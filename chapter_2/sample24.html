@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div>jQuery </div>
+        <p>is the </p>
+        <ul>
+            <li>best!</li>
+        </ul>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                alert($('div, p, ul li').text());
+                // inneficient way
+                alert($('div').text() + $('p').text() + $('ul li').text());
+            })(jQuery)
+        </script>
+    </body>
+</html>

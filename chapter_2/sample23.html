@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div id="i0">jQuery</div>
+        <div id="i1">jQuery</div>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                alert($('div').is('#i1'));
+                alert($('div').is('#i2'));
+                alert($('div').is(':hidden'));
+            })(jQuery)
+        </script>
+    </body>
+</html>
