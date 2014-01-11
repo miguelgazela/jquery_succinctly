@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <a>jQuery.com</a>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                $('a').get(0).title = 'jQuery.com';
+                $('a').attr('href', 'http://www.jquery.com');
+            })(jQuery)
+        </script>
+    </body>
+</html>
