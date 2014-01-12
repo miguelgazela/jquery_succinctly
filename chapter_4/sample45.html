@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div id="nav">
+            <div>nav text</div>
+            <div>nav text</div>
+            <div>nav text</div>
+            <div>nav text</div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                $('#nav div').click(function(){
+                    alert($('#nav div').index(this));
+                    // or
+                    alert($(this).prevAll().length);
+                });
+            })(jQuery)
+        </script>
+    </body>
+</html>
