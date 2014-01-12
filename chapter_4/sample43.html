@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                $('<div><a></a></div>')
+                    .find('a')
+                        .text('jQuery')
+                        .attr('href', 'http://www.jquery.com')
+                        .end()
+                    .appendTo('body');
+            })(jQuery)          
+        </script>
+    </body>
+</html>

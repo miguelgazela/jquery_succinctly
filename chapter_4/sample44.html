@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div>0</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                alert($('div').index($('div:last')));
+            })(jQuery)
+        </script>
+    </body>
+</html>

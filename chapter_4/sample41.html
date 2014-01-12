@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                alert($('<div><a></a></div>').get(0).nodeName);
+                alert($('<div><a></a></div>').length);
+                alert($('<div><a></a></div><div><a></a></div>').length);
+            })(jQuery)  
+        </script>
+    </body>
+</html>
