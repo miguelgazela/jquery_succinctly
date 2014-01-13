@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <p>jQuery gives me <strong>more <span>power</span></strong> than any other web tool!</p>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                $('p')
+                    .find('*')
+                    .andSelf()
+                    .contents()
+                    .filter(function(){
+                        return this.nodeType == Node.TEXT_NODE;
+                    })
+                    .each(function(i, text){
+                        alert(text.nodeValue)
+                    });
+            })(jQuery)
+        </script>
+    </body>
+</html>

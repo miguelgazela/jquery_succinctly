@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <p>I love using jQuery!</p>
+        <p>I love <strong>really!</strong> using jQuery!</p>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                alert($('p:first').contents().get(0).nodeValue);
+                alert($('p:last').contents().get(0).nodeValue);
+                alert($('p:last').contents().eq(1).text());
+                alert($('p:last').contents().get(2).nodeValue);
+            })(jQuery)
+        </script>
+    </body>
+</html>
