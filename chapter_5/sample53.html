@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <input type="button" name="button" id="button1" />
+        <input type="button" name="button" id="button2" disabled="disabled" />
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                alert($('#button1').is(':enabled'));
+                alert($('#button1:enabled').length);
+                alert($('#button2').is(':enabled'));
+                alert($('#button2:disabled').length);
+            })(jQuery)
+        </script>
+    </body>
+</html>

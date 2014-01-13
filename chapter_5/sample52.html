@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <input type="button" name="button" id="button" value="Click me!" disabled="disabled" />
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                //$('#button')
+                //    .attr('disabled', '');
+                // or
+                $('#button').removeAttr('disabled');
+            })(jQuery)
+        </script>
+    </body>
+</html>
