@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <input type="hidden">
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                alert($('input').is(':hidden'));
+                alert($('input:hidden').length);
+            })(jQuery)
+        </script>
+    </body>
+</html>

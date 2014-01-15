@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <input type="radio" name="" checked="checked">
+        <input type="checkbox" checked="checked">   
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                alert($('input:checkbox').is(':checked'));
+                alert($('input:checkbox:checked').length);
+                alert($('input:radio').is(':checked'));
+                alert($('input:radio:checked').length);
+            })(jQuery)
+        </script>
+    </body>
+</html>
