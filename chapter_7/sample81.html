@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <style>
+            li {
+                padding-bottom: 500px;
+            }
+        </style>
+
+        <ul>
+            <li><a href="#" class="next">Next</a></li>
+            <li><a href="#" class="next">Next</a><a href="#" class="prev">Previous</a></li>
+            <li><a href="#" class="next">Next</a><a href="#" class="prev">Previous</a></li>
+            <li><a href="#" class="prev">Previous</a></li>
+        </ul>
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                $('.next').click(function() {
+                    $('html').animate({scrollTop: $(this).parent().next().find('a').offset().top }, 1000);
+                });
+
+                $('.prev').click(function() {
+                    $('html').animate({scrollTop: $(this).parent().prev().find('a').offset().top }, 1000);
+                });
+            })(jQuery);
+        </script>
+    </body>
+</html>
