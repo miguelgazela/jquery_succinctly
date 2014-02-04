@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <button>Add another button</button>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                $('button').click(function(){
+                    var $this = $(this);
+                    $this.clone(true).insertAfter(this);
+                    $this.text('button').unbind('click');
+                });
+
+                $('.clone').click(function(){
+                    var $this = $(this);
+                    $this.clone().insertAfter(this);
+                    $this.text('link').unbind('click');
+                });
+            })(jQuery);
+        </script>
+    </body>
+</html>

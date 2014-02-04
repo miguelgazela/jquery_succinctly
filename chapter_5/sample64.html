@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <input type="button" value="Input Button">
+        <input type="checkbox">
+        <input type="file">
+        <input type="hidden">
+        <input type="image">
+        <input type="password">
+        <input type="radio">
+        <input type="reset">
+        <input type="submit">
+        <input type="text">
+        <select>
+            <option value="">Option</option>
+        </select>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button>Button</button>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                alert($(':input').length);
+            })(jQuery)
+        </script>
+    </body>
+</html>

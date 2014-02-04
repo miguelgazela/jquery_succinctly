@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <input type="text" value="Click me">
+        <br><br>
+        <button>remove events</button>
+        <div name="log" id="log"></div>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                $('input').bind('click', function() {alert("You clicked me!");});
+                $('input').bind('focus', function() {
+                    $('#log').html("You focused this input!");
+                });
+                $('button').click(function() {
+                    $('input').unbind('click');
+                    $('input').unbind('focus');
+                });
+            })(jQuery)
+        </script>
+    </body>
+</html>

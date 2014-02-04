@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div>jQuery</div>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                $('div').bind('myCustomEvent', function() {
+                    window.location = "http://www.jquery.com";
+                });
+
+                $('div').click(function(){
+                    $(this).trigger('myCustomEvent');
+                });
+            })(jQuery);
+        </script>
+    </body>
+</html>

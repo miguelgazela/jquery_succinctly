@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div style="margin: 200px; height: 100px; width: 100px; background: #ccc; padding: 20px;">relative to this</div>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                $('div').mousemove(function(e) {
+                    var relativeX = e.pageX - this.offsetLeft;
+                    var relativeY = e.pageY - this.offsetTop;
+                    $(this).html("relativeX = " + relativeX + ", relativeY = " + relativeY);
+                });
+            })(jQuery);
+        </script>
+    </body>
+</html>

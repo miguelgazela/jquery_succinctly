@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <span><a href="javascript:alert('You clicked me')" class="link">click me</a></span>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                $('span').click(function(){
+                    window.location = 'http://www.jquery.com';
+                });
+
+                $('a').click(function() {
+                    // ignore clicks on a
+                    return false;
+                });
+            })(jQuery);
+        </script>
+    </body>
+</html>

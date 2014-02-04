@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <button>Add another button</button>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                $('button').live('click', function() {
+                    $(this).after("<button>Add another button</button>");
+                });
+            })(jQuery);
+        </script>
+    </body>
+</html>

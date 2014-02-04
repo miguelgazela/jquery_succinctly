@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <a href="#">click me</a>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                $('a').bind('click', function() {
+                    alert('You cliked me');
+                });
+
+                $('a').bind('click.unique', function() {
+                    alert('You trigger click.unique');
+                });
+
+                $('a').trigger('click.unique');
+            })(jQuery);
+        </script>
+    </body>
+</html>

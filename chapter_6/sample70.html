@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <ul>
+            <li><a href="">remove</a></li>
+            <li><a href="">remove</a></li>
+            <li><a href="">remove</a></li>
+            <li><a href="">remove</a></li>
+            <li><a href="">remove</a></li>
+            <li><a href="">remove</a></li>
+        </ul>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                $('ul').click(function(event){
+                    $(event.target).parent().remove();
+                    return false; // cancel default browser behavior, stop propagation
+                });
+            })(jQuery);
+        </script>
+    </body>
+</html>
