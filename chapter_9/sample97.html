@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>       
+        <div style="height: 100px; width: 100px; background-color: red; position: absolute; left: 20px; border: 1px solid #ff9933">Animate me!</div>
+        <div style="height: 100px; width: 100px; background-color: red; position: absolute; left: 20px; top: 100px; border: 1px solid #ff9933">Animate me!</div>   
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($) {
+                $('div:first').slideUp('slow').slideDown('slow').hide('slow');
+                $('div:last').animate({width: '200px'}, 1000).animate({borderLeftWidth: '10px'}, 1000);
+            })(jQuery);
+        </script>
+    </body>
+</html>

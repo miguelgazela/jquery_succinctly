@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div style="height: 100px; width: 100px; background-color: red; position: absolute; left: 20px;">Try to animate me!</div>
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($) {
+                jQuery.fx.off = true;
+                $('div').slideUp();
+            })(jQuery);
+        </script>
+    </body>
+</html>

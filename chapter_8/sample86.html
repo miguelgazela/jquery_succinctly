@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div class="" id="counter1"></div>
+        <div class="" id="counter2"></div>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($){
+                $.fn.count = function() {
+                    return this.each(function() {
+                        var $this = $(this);
+                        $this.text('0');
+                        var myInterval = window.setInterval(function(){
+                            var currentCount = parseFloat($this.text());
+                            var newCount = currentCount + 1;
+                            $this.text(newCount + '');
+                        }, 1000);
+                    });
+                };
+            })(jQuery);
+
+            jQuery('#counter1, #counter2').count().parent().append('<p>Chaining still works!</p>');
+        </script>
+    </body>
+</html>

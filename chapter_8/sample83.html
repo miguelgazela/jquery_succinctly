@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div class="" id="counter1"></div>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($) {
+                $.fn.count = function() {
+                    var $this = $(this);
+                    $this.text('0');
+                    var myInterval = window.setInterval(function() {
+                        var currentCount = parseFloat($this.text());
+                        var newCount = currentCount + 1;
+                        $this.text(newCount + '');
+                    }, 1000);
+                };
+            })(jQuery);
+            jQuery('#counter1').count();
+        </script>
+    </body>
+</html>

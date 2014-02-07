@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div>Out And In Fade</div>
+        <div>Out And In Fade</div>
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+            (function($) {
+                $.fn.outAndInFade = function(customOptions) {
+                    var options = $.extend({}, $.fn.outAndInFade.defaultOptions, customOptions || {});
+                    return this.each(function() {
+                        $(this).fadeOut().fadeIn('normal', function() {
+                            if ($.isFunction(options.complete)) {
+                                options.complete.apply(this);
+                            }
+                        });
+                    });
+                };
+
+                $.fn.outAndInFade.defaultOptions = {
+                    complete: null
+                };
+
+            })(jQuery);
+
+            jQuery('div').outAndInFade({
+                complete: function() { $(this).css('background', '#ff9');}
+            });
+        </script>
+    </body>
+</html>
